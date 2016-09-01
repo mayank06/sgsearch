@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>Sample</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=yes">
+	<meta name="description" content="EmPowerMe-App">
+	<meta name="AUTOHR" content="EmPowerMe">
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" type="text/css" href="../css/Home.css" />
+</head>
+<body>
+	<script src='../js/lib/jquery/jquery-1.11.0.js' type="text/javascript"></script>
+	<script src='../js/lib/knockout/knockout-3.0.0.js' type="text/javascript"></script>
+<div class="whole-body">
+	<div class="header">
+		<div class="header-content sg-icon">
+			<div class="dash-in-icon"></div>
+		</div>
+		<div class="header-content sg-letters">S G</div>
+		<div class="header-content member-heading">Members</div>
+		<div class="header-content member-subtitle">--Searching made easy!</div>
+		<div class="header-content header-right">
+			<div class="header-right-content">Good Morning</div>
+			<div class="header-right-content no-border">Total Memebers: <span>200</span></div>
+		</div>
+	</div>
+	<div class="information-box">
+		<div class="search-box-background">
+			<div class="search-box">
+				<div class="information-content magnifier"></div>
+				<input class="information-content search-input" id="search-info" data-bind="value:searchString,event:{keyup:searchContent}" type="text" placeholder="Search (by status, height or race)"/>
+				<div class="information-content cross-button"></div>
+			</div>
+		</div>
+		<div data-bind="foreach:hellYes">
+			<div class = "repeat-class">
+				<div class="quote-icon"></div>
+				<div class="person-info">
+					<div class="person-status" data-bind="text: firstName">I'm having trouble with my system.</div>
+					<div class="personal-details">Asian | vegan: X | Height: 152cm | weight: 53.62 KG</div>
+				</div>
+			</div>
+		</div>
+		<div class="pagenation">
+			<div class="page-no firstPage" data-bind="text:firstPage,event:{click:clickedOnFirstPage}">1</div>
+			<div class="page-no" data-bind="text:secondPage,event:{click:clickedOnSecondPage}">1</div>
+			<div class="page-no" data-bind="text:thirdPage,event:{click:clickedOnThirdPage}">1</div>
+			<div class="page-no" data-bind="text:fourthPage,event:{click:clickedOnFourthPage}">1</div>
+			<div class="page-no" data-bind="text:fifthPage,event:{click:clickedOnFifthPage}">1</div>
+			<div class="page-no lastPage" data-bind="text:lastPage,event:{click:clickedOnLastPage}">..</div>
+		</div>
+	</div>
+</div>
+	<script src='../js/Home.js' type="text/javascript"></script>
+</body>
